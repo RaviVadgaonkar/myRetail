@@ -30,7 +30,7 @@ Building:
 Running Boot Application
 --------------------
 
-    java -jar build/libs/myretail-1.0-SNAPSHOT.jar
+    ./gradlew bootRun
 
 The web server will be running and you should be able to navigate to [http://localhost:8080/actuator/health]()
 
