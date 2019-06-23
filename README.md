@@ -55,4 +55,5 @@ curl -X GET http://localhost:8080/myretail/product-details/13860428
 
 **Get Request Invalid product**
 curl -X GET http://localhost:8080/myretail/product-details/xxxxx
+
 *Response* - {"errorType":"INVALID_PRODUCT","errorMessage":"We could not locate this product. Please check if the product id is correct."}
