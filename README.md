@@ -34,5 +34,25 @@ Running Boot Application
 
 The web server will be running and you should be able to navigate to [http://localhost:8080/actuator/health]()
 
+Test results
+------------
+Below are some test results using curl.
 
+**PUT Request**
+curl -X PUT \
+  http://localhost:8080/myretail/product-details/13860428 \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: eae27482-173d-4dba-b223-babb0ede6bd8' \
+  -H 'cache-control: no-cache' \
+  -d '{"id":"13860428","name":"Any Name as we are ignoring the name","current_price":{"value":311.99,"currency_code":"USD"}}'
 
+*Response* - {"id":"13860428","name":"Any Name as we are ignoring the name","current_price":{"value":311.99,"currency_code":"USD"}}
+
+**GET Request**
+curl -X GET http://localhost:8080/myretail/product-details/13860428
+
+*Response* - {"id":"13860428","name":"The Big Lebowski (Blu-ray)","current_price":{"value":311.99,"currency_code":"USD"}}
+
+**Get Request Invalid product**
+curl -X GET http://localhost:8080/myretail/product-details/xxxxx
+*Response* - {"errorType":"INVALID_PRODUCT","errorMessage":"We could not locate this product. Please check if the product id is correct."}
