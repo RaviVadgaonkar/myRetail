@@ -1,4 +1,4 @@
-** MyRetail ** is a demo project which exposes rest webservices for consolidating product details from different data sources which includes pdp rest webservice hosted on redsky as well as Pricing database maintained by this project itself. The PUT endpint could be used to update pricing for any product.
+**myRetail** is a demo project which exposes rest webservices for consolidating product details from different data sources which includes pdp rest webservice hosted on redsky as well as Pricing database maintained by this project itself. The PUT endpint could be used to update pricing for any product.
 
 myRetail project is built using below tech stack,
 
@@ -33,4 +33,6 @@ Running Boot Application
     java -jar build/libs/myretail-1.0-SNAPSHOT.jar
 
 The web server will be running and you should be able to navigate to [http://localhost:8080/heartbeat]()
+
+
 
